@@ -10,4 +10,10 @@ attr_accessor :name
   def self.all
     @@all
   end
+
+  def appointments
+    Appointment.all.select do |meal|
+      meal.customer == self
+    end 
+  end
 end
