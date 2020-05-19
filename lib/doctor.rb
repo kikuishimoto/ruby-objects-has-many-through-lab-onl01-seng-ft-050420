@@ -14,6 +14,6 @@ attr_accessor :name
   def appointments
     Appointment.all.select do |meal|
       meal.customer == self
-    end 
+    end
   end
 end
